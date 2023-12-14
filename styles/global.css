@@ -1,8 +1,11 @@
 :root {
-    --background: #fff;
-    --foreground: #000;
+    --background: #363062;
+    --foreground: #f5ecff;
     --unfocused-border-color: #eaeaea;
     --focused-border-color: #666;
+
+    --primary-color: #685e95;
+    --secondary-color: #00c89b;
 
     --button-disabled-color: #fafafa;
     --disabled-text-color: #999;
@@ -20,30 +23,16 @@
 
 * {
     box-sizing: border-box;
-}
 
-.cinematics {
-    box-shadow: 0 0 200px rgba(0, 0, 0, 0.15);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #000000;
-        --unfocused-border-color: #333;
-        --focused-border-color: #888;
-        --foreground: #fff;
-        --button-disabled-color: #111;
-        --geist-error: red;
-        --subtitle: #8D8D8D
-
-    }
-    .cinematics {
-        box-shadow: 0 0 200px rgba(255, 255, 255, 0.15);
-    }
 }
 
 body {
     background-color: var(--background);
+    color: var(--foreground);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: var(--geist-font);
 }
 
 
@@ -55,4 +44,22 @@ input {
 
 input:focus {
     border-color: var(--focused-border-color);
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 30px;
+}
+
+.right-column {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    padding: 2%;
 }
