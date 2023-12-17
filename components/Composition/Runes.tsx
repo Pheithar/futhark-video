@@ -79,8 +79,6 @@ export const RunesComposition: React.FC<Props> = ({
     return `${Math.max(Math.min(1, (frame - index * 30) / 60), 0)}`;
   });
 
-  console.log(inputColor);
-
   const opacity = Math.min(1, frame / 60);
   return (
     <AbsoluteFill className="runes" style={{ backgroundColor: inputColor }}>
