@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "remotion": "remotion studio",
     "render": "remotion render",
-    "deploy": "node deploy.mjs",
+    "deploy": "node deploy.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
