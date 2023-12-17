@@ -30,6 +30,7 @@ const nextConfig = {
   assetPrefix: "./",
   reactStrictMode: true,
   swcMinify: true,
+  output: "export",
 };
 
 export default nextConfig;

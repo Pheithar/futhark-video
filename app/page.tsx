@@ -9,7 +9,6 @@ const Home = () => {
   const [inputText, setInputText] = useState<string>("Hello world!");
   const [inputColor, setInputColor] = useState<string>("#685e95");
   const [inputImage, setInputImage] = useState<string>("wolf");
-  console.log(inputText, inputColor);
 
   return (
     <Grid container spacing={0}>

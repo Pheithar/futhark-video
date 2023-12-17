@@ -10,7 +10,6 @@
     "remotion": "remotion studio",
     "render": "remotion render",
     "deploy": "node deploy.mjs",
-    "export": "next export"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
