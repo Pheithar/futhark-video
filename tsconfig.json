@@ -9,7 +9,10 @@
         "components/*"
       ],
       "@remotion/*": [
-        "remotion/*"
+        "remotion_old/*"
+      ],
+      "@constants/*": [
+        "constants/*"
       ],
     },
     "target": "es5",

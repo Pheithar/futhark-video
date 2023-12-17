@@ -1,0 +1,23 @@
+.runes {
+  padding: 3rem;
+}
+
+.runes__background {
+  opacity: 0.4;
+}
+
+.runes__text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.runes__text__word {
+  font-size: 10rem;
+  font-weight: bold;
+}

@@ -1,65 +1,84 @@
+@font-face {
+  font-family: "Norse";
+  src: url("/fonts/Norse.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Norse-Bold";
+  src: url("/fonts/Norse-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
-    --background: #363062;
-    --foreground: #f5ecff;
-    --unfocused-border-color: #eaeaea;
-    --focused-border-color: #666;
+  --background: #363062;
+  --foreground: #f5ecff;
+  --unfocused-border-color: #eaeaea;
+  --focused-border-color: #666;
 
-    --primary-color: #685e95;
-    --secondary-color: #00c89b;
+  --primary-color: #685e95;
+  --secondary-color: #00c89b;
 
-    --button-disabled-color: #fafafa;
-    --disabled-text-color: #999;
+  --button-disabled-color: #fafafa;
+  --disabled-text-color: #999;
 
-    --geist-border-radius: 5px;
-    --geist-quarter-pad: 6px;
-    --geist-half-pad: 12px;
-    --geist-pad: 24px;
-    --geist-font: "Inter";
+  --geist-border-radius: 5px;
+  --geist-quarter-pad: 6px;
+  --geist-half-pad: 12px;
+  --geist-pad: 24px;
+  --geist-font: "Inter";
 
-    --geist-error: #e00;
+  --geist-error: #e00;
 
-    --subtitle: #666;
+  --subtitle: #666;
+
+  --font-size: 1.2rem;
+
+  --font-family-norse: "Norse";
+  --font-family-secondary: "sans-serif";
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
+  & a {
+    text-decoration: underline;
+    color: var(--secondary-color);
+  }
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    font-family: var(--geist-font);
+  background-color: var(--background);
+  padding: 0;
+  margin: 0;
 }
 
-
 input {
-    border: 1px solid var(--unfocused-border-color);
-    transition: border-color 0.15s ease;
-    outline: none;
+  border: 1px solid var(--unfocused-border-color);
+  transition: border-color 0.15s ease;
+  outline: none;
 }
 
 input:focus {
-    border-color: var(--focused-border-color);
+  border-color: var(--focused-border-color);
 }
 
 .left-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--primary-color);
-    padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  padding: 30px;
 }
 
 .right-column {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--background);
-    padding: 2%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  padding: 2%;
 }

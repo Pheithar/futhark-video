@@ -1,0 +1,124 @@
+.side-menu {
+  color: var(--foreground);
+  font-family: var(--font-family-norse);
+  font-size: var(--font-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.side-menu__no-footer {
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+
+.side-menu__header {
+}
+
+.side-menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.side-menu__content__item {
+  display: flex;
+  gap: var(--geist-half-pad);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--geist-half-pad);
+  width: 100%;
+  cursor: pointer;
+
+  & label {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+.side-menu__content__item__textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0;
+
+  & textarea {
+    font-family: var(--font-family-secondary);
+    width: 100%;
+    resize: none;
+    outline: none;
+    background-color: var(--background);
+    color: var(--secondary-color);
+    border: 1px solid var(--unfocused-border-color);
+  }
+  & p {
+    margin: 0;
+    font-size: 1rem;
+    /* color: var(--subtitle); */
+  }
+}
+
+.side-menu__content__item__color {
+  & input {
+    display: none;
+  }
+}
+
+.side-menu__content__item__color__preview {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.side-menu__content__item__image__input {
+  display: none;
+}
+
+.side-menu__content__item__image__preview {
+  display: flex;
+  flex-direction: row;
+  gap: var(--geist-half-pad);
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+.side-menu__content__item__image__preview__selected {
+  border: 2px solid var(--secondary-color);
+}
+
+.side-menu__content__item__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--background);
+  border: none;
+  border-radius: var(--geist-border-radius);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  padding: var(--geist-half-pad);
+  margin: var(--geist-half-pad) 0;
+  margin-top: 4rem;
+  font-family: var(--font-family-norse);
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #00b38f;
+  }
+}
+
+.side-menu__footer {
+}

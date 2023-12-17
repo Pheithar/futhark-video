@@ -1,18 +1,35 @@
 "use client";
-import Grid from '@mui/material/Grid';
+import React, { useState } from "react";
+import Grid from "@mui/material/Grid";
 import { Player } from "@remotion/player";
-import { Main as MainComposition } from "@remotion/RunesComposition/Main"
+import { SideMenu } from "@components/SideMenu/Menu";
+import { RunesComposition } from "@components/Composition/Runes";
 
 const Home = () => {
+  const [inputText, setInputText] = useState<string>("Hello world!");
+  const [inputColor, setInputColor] = useState<string>("#685e95");
+  const [inputImage, setInputImage] = useState<string>("wolf");
+  console.log(inputText, inputColor);
+
   return (
     <Grid container spacing={0}>
-      <Grid item xs={4} className="left-column">
-        <h1>Home</h1>
+      <Grid item xs={12} md={3} className="left-column">
+        <SideMenu
+          setVideoText={setInputText}
+          setVideoColor={setInputColor}
+          setVideoImage={setInputImage}
+        />
       </Grid>
-      <Grid item xs={8} className="right-column">
+      <Grid item xs={12} md={9} className="right-column">
         <Player
-          component={MainComposition}
-          durationInFrames={120}
+          component={RunesComposition}
+          inputProps={{
+            inputText: inputText,
+            inputColor: inputColor,
+            inputImage: inputImage,
+          }}
+          durationInFrames={30 + 30 * inputText.split(" ").length}
+          //Not the best way to do this, but I don't care, it is a demo
           compositionWidth={1920}
           compositionHeight={1080}
           style={{
@@ -22,11 +39,11 @@ const Home = () => {
           fps={30}
           controls
           loop
-          autoplay
+          autoPlay
         />
-      </Grid> 
+      </Grid>
     </Grid>
-  )
-}
+  );
+};
 
 export default Home;
