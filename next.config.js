@@ -5,6 +5,9 @@ const nextConfig = {
   output: "export",
   basePath: "/futhark-video/",
   assetPrefix: "/futhark-video/",
+  images: {
+    path: "/futhark-video/",
+  },
   webpack: (config, { webpack, isServer, nextRuntime }) => {
     // Workaround for the following issue:
     // https://github.com/aws-amplify/amplify-js/issues/11030#issuecomment-1598207365
