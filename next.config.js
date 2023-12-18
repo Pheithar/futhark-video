@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
-  basePath: "/futhark-video",
-  assetPrefix: "/futhark-video",
+  // basePath: "/futhark-video",
+  // assetPrefix: "/futhark-video",
   images: {
     unoptimized: true,
   },

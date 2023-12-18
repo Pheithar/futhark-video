@@ -1,7 +1,9 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, Img, staticFile } from "remotion";
+import { AbsoluteFill, useCurrentFrame, Img } from "remotion";
 import "./Runes.css";
-
+import WolfImage from "@assets/images/wolf.jpg";
+import RavenImage from "@assets/images/raven.jpg";
+import BearImage from "@assets/images/bear.jpg";
 type Props = {
   inputText: string;
   inputColor: string;
@@ -64,6 +66,8 @@ const font_white_or_black = (hex: string) => {
   return brightness > 128 ? "#000000" : "#ffffff";
 };
 
+console.log(WolfImage.src);
+
 export const RunesComposition: React.FC<Props> = ({
   inputText,
   inputColor,
@@ -79,14 +83,24 @@ export const RunesComposition: React.FC<Props> = ({
     return `${Math.max(Math.min(1, (frame - index * 30) / 60), 0)}`;
   });
 
+  const getImageSrc = (inputImage: string) => {
+    switch (inputImage) {
+      case "wolf":
+        return WolfImage.src;
+      case "raven":
+        return RavenImage.src;
+      case "bear":
+        return BearImage.src;
+      default:
+        return WolfImage.src;
+    }
+  };
+
   const opacity = Math.min(1, frame / 60);
   return (
     <AbsoluteFill className="runes" style={{ backgroundColor: inputColor }}>
       <AbsoluteFill>
-        <Img
-          className="runes__background"
-          src={staticFile(`images/${inputImage}.jpg`)}
-        />
+        <Img className="runes__background" src={getImageSrc(inputImage)} />
       </AbsoluteFill>
       <AbsoluteFill>
         <div className="runes__text" style={{ opacity }}>

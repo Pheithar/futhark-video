@@ -5,6 +5,9 @@ import "./Menu.css";
 import React, { useState } from "react";
 import { INPUT_MAX_LENGTH } from "@constants/input";
 import Image from "next/image";
+import WolfImage from "@assets/images/wolf.jpg";
+import RavenImage from "@assets/images/raven.jpg";
+import BearImage from "@assets/images/bear.jpg";
 
 type Props = {
   setVideoText: (text: string) => void;
@@ -135,12 +138,7 @@ export const SideMenu: React.FC<Props> = ({
                       : ""
                   }
                 >
-                  <Image
-                    src="/images/wolf.jpg"
-                    alt="Wolf"
-                    width={100}
-                    height={100}
-                  />
+                  <Image src={WolfImage} alt="Wolf" width={100} height={100} />
                 </label>
                 <label
                   htmlFor="raven"
@@ -151,7 +149,7 @@ export const SideMenu: React.FC<Props> = ({
                   }
                 >
                   <Image
-                    src="/images/raven.jpg"
+                    src={RavenImage}
                     alt="raven"
                     width={100}
                     height={100}
@@ -165,12 +163,7 @@ export const SideMenu: React.FC<Props> = ({
                       : ""
                   }
                 >
-                  <Image
-                    src="/images/bear.jpg"
-                    alt="bear"
-                    width={100}
-                    height={100}
-                  />
+                  <Image src={BearImage} alt="bear" width={100} height={100} />
                 </label>
               </div>
             </div>
