@@ -3,10 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: "export",
-  basePath: "/futhark-video/",
-  assetPrefix: "/futhark-video/",
+  basePath: "/futhark-video",
+  assetPrefix: "/futhark-video",
   images: {
-    path: "/futhark-video/",
+    unoptimized: true,
+    path: "/futhark-video",
   },
 };
 
